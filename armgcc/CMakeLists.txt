@@ -376,6 +376,8 @@ include_directories(${ProjDirPath}/../middleware/usb/include)
 
 include_directories(${ProjDirPath}/../middleware/usb/device)
 
+include_directories(${ProjDirPath}/../middleware/usb/phy)
+
 add_executable(i2s_dma_record_playback.elf 
 "${ProjDirPath}/../src/i2s_dma_record_playback.c"
 "${ProjDirPath}/../board/pin_mux.c"
@@ -411,6 +413,7 @@ add_executable(i2s_dma_record_playback.elf
 "${ProjDirPath}/../device/utilities/fsl_sbrk.c"
 "${ProjDirPath}/../middleware/usb/device/usb_device_lpcip3511.c"
 "${ProjDirPath}/../middleware/usb/device/usb_device_dci.c"
+"${ProjDirPath}/../middleware/usb/phy/usb_phy.c"
 "${ProjDirPath}/../components/osa/fsl_os_abstraction_bm.c"
 "${ProjDirPath}/../src/usb_device_audio.c"
 "${ProjDirPath}/../src/usb_device_ch9.c"

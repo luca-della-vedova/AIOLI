@@ -27,6 +27,26 @@
 #include "fsl_sysctl.h"
 #include "fsl_codec_adapter.h"
 #include "fsl_power.h"
+
+// USB stuff
+#include "usb_device_config.h"
+#include "usb.h"
+#include "usb_device.h"
+
+#include "usb_device_audio.h"
+#include "usb_audio_config.h"
+#include "usb_device_ch9.h"
+#include "usb_device_descriptor.h"
+
+#include "audio_generator.h"
+
+#if (defined(FSL_FEATURE_SOC_SYSMPU_COUNT) && (FSL_FEATURE_SOC_SYSMPU_COUNT > 0U))
+#include "fsl_sysmpu.h"
+#endif /* FSL_FEATURE_SOC_SYSMPU_COUNT */
+#if ((defined FSL_FEATURE_SOC_USBPHY_COUNT) && (FSL_FEATURE_SOC_USBPHY_COUNT > 0U))
+#include "usb_phy.h"
+#endif
+
 /*******************************************************************************
  * Definitions
  ******************************************************************************/
