@@ -1,7 +1,7 @@
 # binaries
 armgcc/release/*
 # logs and build files
-armgcc/*.txt
+armgcc/build_log.txt
 armgcc/*.map
 armgcc/*.cmake
 armgcc/Makefile
