@@ -1,0 +1,9 @@
+# binaries
+armgcc/release/*
+# logs and build files
+armgcc/*.txt
+armgcc/*.map
+armgcc/*.cmake
+armgcc/Makefile
+armgcc/CMakeCache.txt
+armgcc/CMakeFiles/*
