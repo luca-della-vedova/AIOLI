@@ -368,7 +368,13 @@ include_directories(${ProjDirPath}/../components/serial_manager)
 
 include_directories(${ProjDirPath}/../components/lists)
 
+include_directories(${ProjDirPath}/../components/osa)
+
 include_directories(${ProjDirPath}/../device/utilities)
+
+include_directories(${ProjDirPath}/../middleware/usb/include)
+
+include_directories(${ProjDirPath}/../middleware/usb/device)
 
 add_executable(i2s_dma_record_playback.elf 
 "${ProjDirPath}/../src/i2s_dma_record_playback.c"
@@ -403,6 +409,12 @@ add_executable(i2s_dma_record_playback.elf
 "${ProjDirPath}/../components/serial_manager/serial_port_uart.c"
 "${ProjDirPath}/../drivers/fsl_reset.c"
 "${ProjDirPath}/../device/utilities/fsl_sbrk.c"
+"${ProjDirPath}/../middleware/usb/device/usb_device_lpcip3511.c"
+"${ProjDirPath}/../middleware/usb/device/usb_device_dci.c"
+"${ProjDirPath}/../components/osa/fsl_os_abstraction_bm.c"
+"${ProjDirPath}/../src/usb_device_audio.c"
+"${ProjDirPath}/../src/usb_device_ch9.c"
+"${ProjDirPath}/../src/usb_device_descriptor.c"
 )
 
 set(CMAKE_EXE_LINKER_FLAGS_DEBUG "${CMAKE_EXE_LINKER_FLAGS_DEBUG} -T${ProjDirPath}/LPC55S69_cm33_core0_flash.ld -static")
